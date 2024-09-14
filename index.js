@@ -1,4 +1,24 @@
-const { select } = require('@inquirer/prompts') // Importanção do modulo require
+const { select, input } = require('@inquirer/prompts') // Importanção do modulo require
+
+let meta = {
+    value: 'Tomar 3L de água por dia',
+    checked: false
+}
+
+let metas = [ meta ]
+
+const cadastrarMeta = async () => {
+    const meta = await input({ message: "Digite a meta:"})
+
+    if(meta.length == 0){
+        console.log('A meta não pode ser vazia.')
+        return
+    }
+
+    metas.push(
+        { value: meta, checked: false }
+    )
+}
 
 const start = async () => { // ArrowFunction
 
@@ -23,7 +43,8 @@ const start = async () => { // ArrowFunction
 
         switch(opcao) {
             case "cadastrar":
-                console.log("Vamos cadastrar")
+                await cadastrarMeta()
+                console.log(metas)
                 break
             case "listar":
                 console.log("Vamos listar")

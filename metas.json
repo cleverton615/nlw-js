@@ -1,0 +1,22 @@
+[
+  {
+    "value": "Tomar 3L de água por dia",
+    "checked": false
+  },
+  {
+    "value": "nadar 1h por dia",
+    "checked": false
+  },
+  {
+    "value": "caminhar 1h por dia",
+    "checked": false
+  },
+  {
+    "value": "dormir 8h por dia",
+    "checked": false
+  },
+  {
+    "value": "estudar 1h por dia",
+    "checked": false
+  }
+]
